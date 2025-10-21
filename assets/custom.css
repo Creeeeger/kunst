@@ -46,6 +46,7 @@ a:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
   padding: 4rem 6vw 6rem;
   overflow: hidden;
@@ -67,14 +68,25 @@ a:focus {
 }
 
 .hero::after {
-  background: url("../images/s2dlogo.jpg") center/contain no-repeat;
+  background: url("../images/s2dlogo.jpg") center no-repeat;
+  background-size: 140%;
   opacity: 0.06;
-  transform: translateY(10%);
+  transform: scale(1.08) translateY(6%);
   z-index: 0;
+}
+
+.hero__container {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: clamp(6.5rem, 12vh, 10rem) auto 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .hero__content {
   position: relative;
+  width: min(100%, 640px);
   max-width: 640px;
   z-index: 1;
   backdrop-filter: blur(16px);
@@ -446,6 +458,10 @@ a:focus {
     padding: 2.5rem;
   }
 
+  .hero__container {
+    margin-top: clamp(5rem, 18vw, 7rem);
+  }
+
   .nav {
     padding: 0.65rem 1.25rem;
   }
@@ -458,6 +474,11 @@ a:focus {
 @media (max-width: 760px) {
   .hero {
     padding: 3rem 1.5rem 5rem;
+  }
+
+  .hero__container {
+    margin-top: 6.5rem;
+    justify-content: center;
   }
 
   .nav {
