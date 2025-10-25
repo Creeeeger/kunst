@@ -18,20 +18,21 @@
 <script src="./assets/navigation.js"></script> 
 <script src="./assets/common.js"></script>
 <script src="./assets/tallinnslider.js"></script>
+<script src="./assets/layout.js" defer></script>
 </head>
 
-<body>
+<body data-root="./">
 
-<nav class="sqrnav">
+<nav class="sqrnav" data-nav-placeholder>
+<noscript>
+<a href="#" class="sqrnavshow">Navigation &ouml;ffnen</a>
+<a href="#" class="sqrnavhide">Navigation schlie&szlig;en</a>
 
-<a href="#" class="sqrnavshow">Navigation öffnen</a>
-<a href="#" class="sqrnavhide">Navigation schließen</a>
-	
 <ul>
-	
+
 <li class="sqrnavhome"><a href="./index.html"><span>Startseite</span></a></li>
 
-	
+
 <li><a href="./ueber-uns/index.html"><span>&Uuml;ber mich</span></a>
 </li>
 <li><a href="./unsere-leistung/index.html"><span>Meine Leistung</span></a>
@@ -44,9 +45,10 @@
 </li>
 <li><a href="./kontakt-und-impressum/index.html"><span>Kontakt</span></a>
 </li>
-<li><a href="https://engl.haerle-kunstvermittlung.com/"><span>| englisch |</span></a>
+<li><a href="https://engl.haerle-kunstvermittlung.com/"><span>| Englisch |</span></a>
 </li>
 </ul>
+</noscript>
 </nav>
 
 <div class="sqrmainarea">
@@ -124,7 +126,7 @@ Sie sind hier:
 <input type="hidden" name="fgwuid" value="133425aef70a96905"/>
 </div>
 <div>
-<p class="sqrformr">* Pflichtfelder, die ausgefüllt werden müssen.</p>
+<p class="sqrformr">* Pflichtfelder, die ausgefllt werden mssen.</p>
 </div>
 
 <div>
@@ -141,7 +143,8 @@ Sie sind hier:
 </div>
 </div>
 
-<footer>
+<footer data-footer-placeholder>
+<noscript>
 <div class="sqrcommonlinks">
 <a href="./impressum.html">Impressum</a>
 <a href="./cookies.html">Cookies</a>
@@ -151,6 +154,7 @@ Sie sind hier:
 </div>
 <div class="sqrfootertext">
 (c) H&auml;rle 2025</div>
+</noscript>
 </footer>
 
 </body>
