@@ -1,1 +1,0 @@
-<?php die("Made with SIQUANDO Web."); ?>a:1:{i:19746;O:13:"captchaticket":2:{s:4:"code";i:972708;s:9:"timestamp";i:1659019400;}}
