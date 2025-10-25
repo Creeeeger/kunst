@@ -22,32 +22,7 @@
 
 <body>
 
-<nav class="sqrnav">
-
-<a href="#" class="sqrnavshow">Navigation öffnen</a>
-<a href="#" class="sqrnavhide">Navigation schließen</a>
-	
-<ul>
-	
-<li class="sqrnavhome"><a href="./index.html"><span>Startseite</span></a></li>
-
-	
-<li><a href="./ueber-uns/index.html"><span>&Uuml;ber mich</span></a>
-</li>
-<li><a href="./unsere-leistung/index.html"><span>Meine Leistung</span></a>
-</li>
-<li><a href="./netzwerk/index.html"><span>Netzwerk</span></a>
-</li>
-<li><a href="./kunst-als-kapitalanlage/index.html"><span>Kapitalanlage</span></a>
-</li>
-<li><a href="./ausstellungen/index.html"><span>Ausstellungen</span></a>
-</li>
-<li><a href="./kontakt-und-impressum/index.html"><span>Kontakt</span></a>
-</li>
-<li><a href="https://engl.haerle-kunstvermittlung.com/"><span>| englisch |</span></a>
-</li>
-</ul>
-</nav>
+<div id="site-menu"></div>
 
 <div class="sqrmainarea">
 <div class="sqrmainshadow">
@@ -124,7 +99,7 @@ Sie sind hier:
 <input type="hidden" name="fgwuid" value="133425aef70a96905"/>
 </div>
 <div>
-<p class="sqrformr">* Pflichtfelder, die ausgefüllt werden müssen.</p>
+<p class="sqrformr">* Pflichtfelder, die ausgefllt werden mssen.</p>
 </div>
 
 <div>
@@ -141,18 +116,9 @@ Sie sind hier:
 </div>
 </div>
 
-<footer>
-<div class="sqrcommonlinks">
-<a href="./impressum.html">Impressum</a>
-<a href="./cookies.html">Cookies</a>
-<a href="./datenschutz.html">Datenschutz</a>
-<a href="./haftungsausschluss.html">Haftungsausschluss</a>
-<a href="./datenschutzformular.php">Datenschutzformular</a>
-</div>
-<div class="sqrfootertext">
-(c) H&auml;rle 2025</div>
-</footer>
+<div id="site-footer"></div>
 
+<script src="assets/layout.js"></script>
 </body>
 
 </html>
