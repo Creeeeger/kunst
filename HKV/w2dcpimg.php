@@ -11,11 +11,11 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 @ini_set('default_charset','ISO-8859-1');
-include('./assets/w2dcpcls.php');
+include('./captcha/w2dcpcls.php');
 
 $cap=new captchas();
 $cap->imagespath='./images/';
-$cap->datapath='./assets/plugindata/';
+$cap->datapath='./captcha/plugindata/';
 $cap->getpicture($_GET['id']);
 
 ?>

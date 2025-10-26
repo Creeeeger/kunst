@@ -11,13 +11,13 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 @ini_set('default_charset','ISO-8859-1');
-include('./assets/w2dcpcls.php');
+include('./captcha/w2dcpcls.php');
 
 $fgwcaptchaid = $_POST['id'];
 $fgwcaptchacode = $_POST['code'];
 
 $captcha=new captchas();
-$captcha->datapath='./assets/plugindata/';
+$captcha->datapath='./captcha/plugindata/';
 if ($captcha->checkticket($fgwcaptchaid,$fgwcaptchacode, false))
 	die('ok');
 

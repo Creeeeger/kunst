@@ -150,7 +150,7 @@ function createMimeMail() {
 
 	//////////////////////////////////////////////////////////////////////////
 	//
-	// Änderungen File Upload
+	// Ã„nderungen File Upload
 	// etor e.K. 31.07.2008
 	// START
 	//
@@ -186,7 +186,7 @@ function createMimeMail() {
 	$mymime.=my_quoted_printable_encode(createHTMLMail())."\n";
 	$mymime.="----".$inner."WEB2DATEGATEWAY--\n";
 
-	// Falls verschachtelt, Uploads einfügen und Ende vom äusseren Multipart
+	// Falls verschachtelt, Uploads einfÃ¼gen und Ende vom Ã¤usseren Multipart
 	if ($inner) {
 		$mymime .= $mymimeuploads;
 		$mymime.="----WEB2DATEGATEWAY--\n";
@@ -201,7 +201,7 @@ function createMimeMail() {
 
 function deSlash(&$element) {
 
-	// Für Stripslash
+	// FÃ¼r Stripslash
 
 	$element=stripslashes($element);
 }
@@ -212,7 +212,7 @@ function deSlash(&$element) {
 
 //////////////////////////////////////////////////////////////////////////
 //
-// Änderungen Email
+// Ã„nderungen Email
 // etor e.K. 29.04.2009
 //
 
@@ -232,8 +232,8 @@ $captchauids=array('133425aef70a96905');
 
 //////////////////////////////////////////////////////////////////////////
 //
-// Änderungen Email
-// etor e.K. 29.04.2009
+		include('./captcha/w2dcpcls.php');
+		$captcha->datapath='./captcha/plugindata/';
 //
 
 $fgwemail = isset($whitelist[$fgwemailuid]) ? $whitelist[$fgwemailuid] : null;
@@ -254,7 +254,7 @@ if ($fgwemail!='nomail@kaufrausch.de') {
 
 	//////////////////////////////////////////////////////////////////////////
 	//
-	// Änderungen Email
+	// Ã„nderungen Email
 	// etor e.K. 29.04.2009
 	//
 
