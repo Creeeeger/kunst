@@ -10,7 +10,7 @@
 ///
 //////////////////////////////////////////////////////////////////////////////////////////
 
-@ini_set('default_charset','ISO-8859-1');
+@ini_set('default_charset','UTF-8');
 include('./assets/w2dcpcls.php');
 
 $cap=new captchas();
