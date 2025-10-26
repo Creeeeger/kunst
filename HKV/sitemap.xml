@@ -84,10 +84,4 @@
 		<priority>0.5</priority>
 		<changefreq>monthly</changefreq>
 	</url>
-	<url>
-		<loc>http://haerle-kunstvermittlung.com/-englisch-/index.html</loc>
-		<lastmod>2025-08-05</lastmod>
-		<priority>0.5</priority>
-		<changefreq>monthly</changefreq>
-	</url>
 </urlset>
