@@ -83,18 +83,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" lang="en" content="" />
-<link rel="stylesheet" type="text/css" href="../shared/assets/sf.css" />
-<link rel="stylesheet" type="text/css" href="../shared/assets/sd.css" />
-<link rel="stylesheet" type="text/css" href="../shared/assets/sc.css" />
-<link rel="canonical" href="/en/privacy-form.php" />
-<script src="../shared/assets/jquery.js"></script>
-<script src="../shared/assets/layout.js"></script>
-<script src="../shared/assets/navigation.js"></script>
-<script src="../shared/assets/common.js"></script>
-<script src="../shared/assets/tallinnslider.js"></script>
+<link rel="stylesheet" type="text/css" href="../../shared/assets/sf.css" />
+<link rel="stylesheet" type="text/css" href="../../shared/assets/sd.css" />
+<link rel="stylesheet" type="text/css" href="../../shared/assets/sc.css" />
+<link rel="canonical" href="/en/privacy-form/" />
+<script src="../../shared/assets/jquery.js"></script>
+<script src="../../shared/assets/layout.js"></script>
+<script src="../../shared/assets/navigation.js"></script>
+<script src="../../shared/assets/common.js"></script>
+<script src="../../shared/assets/tallinnslider.js"></script>
 </head>
 
-<body data-lang="en" data-root="." data-page="privacy-form" data-lang-switch="../de/datenschutzformular.php">
+<body data-lang="en" data-root=".." data-page="privacy-form" data-lang-switch="../../de/datenschutzformular/index.php">
 
 <nav class="sqrnav" data-layout="nav"></nav>
 
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header data-autoprogress="5">
 <div id="headercontainer">
 
-<img src="../shared/images/s2dlogo.jpg" alt="" />
+<img src="../../shared/images/s2dlogo.jpg" alt="" />
 <div id="eyecatcherwait"></div>
 </div>
 
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 <div class="sqrpara">
 <h2 id="133425aef70a8b102">Exercise your rights</h2>
-<p style=""><br/>Please use this form exclusively to exercise your data protection rights.<br/>In the interest of both parties, I recommend handling these matters in writing only.<br/>For all other enquiries, please use my <a class="link" href="./contact-and-legal-notice/index.html">contact form</a>.<br/><br/>You can also use this form to inform me of changes to your data, such as your email or postal address.<br/><br/>For documentation purposes, communication regarding information, rectification, or objections to data processing submitted via this form is archived for five years.<br/></p>
+<p style=""><br/>Please use this form exclusively to exercise your data protection rights.<br/>In the interest of both parties, I recommend handling these matters in writing only.<br/>For all other enquiries, please use my <a class="link" href="../contact-and-legal-notice/index.html">contact form</a>.<br/><br/>You can also use this form to inform me of changes to your data, such as your email or postal address.<br/><br/>For documentation purposes, communication regarding information, rectification, or objections to data processing submitted via this form is archived for five years.<br/></p>
 </div>
 <div class="sqrpara">
 <?php if ($success) { ?>
@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </ul>
 </div>
 <?php } ?>
-<form method="POST" action="privacy-form.php" class="sqrform" enctype="application/x-www-form-urlencoded" novalidate>
+<form method="POST" action="index.php" class="sqrform" enctype="application/x-www-form-urlencoded" novalidate>
 <div class="sqrformrow">
 <label class="sqrforml" for="privacy-form-first-name">First name:</label>
 <input class="sqrformr" type="text" id="privacy-form-first-name" name="first_name" value="<?php echo htmlspecialchars($firstName, ENT_QUOTES, 'UTF-8'); ?>" autocomplete="given-name" />
@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php } ?>
 </div>
 <div class="sqrpara">
-<a class="sqrbutton sqrprevpage" href="disclaimer.html"><span>Disclaimer</span></a>
+<a class="sqrbutton sqrprevpage" href="../disclaimer/index.html"><span>Disclaimer</span></a>
 </div>
 </div>
 </article>

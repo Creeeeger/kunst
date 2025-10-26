@@ -83,18 +83,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" lang="de" content="" />
-<link rel="stylesheet" type="text/css" href="../shared/assets/sf.css" />
-<link rel="stylesheet" type="text/css" href="../shared/assets/sd.css" />
-<link rel="stylesheet" type="text/css" href="../shared/assets/sc.css" />
-<link rel="canonical" href="/de/datenschutzformular.php" />
-<script src="../shared/assets/jquery.js"></script>
-<script src="../shared/assets/layout.js"></script>
-<script src="../shared/assets/navigation.js"></script>
-<script src="../shared/assets/common.js"></script>
-<script src="../shared/assets/tallinnslider.js"></script>
+<link rel="stylesheet" type="text/css" href="../../shared/assets/sf.css" />
+<link rel="stylesheet" type="text/css" href="../../shared/assets/sd.css" />
+<link rel="stylesheet" type="text/css" href="../../shared/assets/sc.css" />
+<link rel="canonical" href="/de/datenschutzformular/" />
+<script src="../../shared/assets/jquery.js"></script>
+<script src="../../shared/assets/layout.js"></script>
+<script src="../../shared/assets/navigation.js"></script>
+<script src="../../shared/assets/common.js"></script>
+<script src="../../shared/assets/tallinnslider.js"></script>
 </head>
 
-<body data-lang="de" data-root="." data-page="datenschutzformular" data-lang-switch="../en/privacy-form.php">
+<body data-lang="de" data-root=".." data-page="datenschutzformular" data-lang-switch="../../en/privacy-form/index.php">
 
 <nav class="sqrnav" data-layout="nav"></nav>
 
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header data-autoprogress="5">
 <div id="headercontainer">
 
-<img src="../shared/images/s2dlogo.jpg" alt="" />
+<img src="../../shared/images/s2dlogo.jpg" alt="" />
 <div id="eyecatcherwait"></div>
 </div>
 
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 Sie sind hier:
 
-<a href="./index.html">Startseite</a>
+<a href="../index.html">Startseite</a>
 
 </div>
 </div>
@@ -127,7 +127,7 @@ Sie sind hier:
 </div>
 <div class="sqrpara">
 <h2 id="133425aef70a8b102">zur Nutzung Ihrer Rechte</h2>
-<p style=""><br/>Bitte verwenden Sie dieses Formular ausschließlich zur Wahrnehmung Ihrer Datenschutzrechte.<br/>Im Interesse beider Seiten empfehle ich, diese Anliegen ausschließlich schriftlich zu klären.<br/>Für alle anderen Formen der Kontaktaufnahme nutzen Sie bitte mein <a class="link" href="./kontakt-und-impressum/index.html">Kontaktformular</a>.<br/><br/>Mit diesem Formular können Sie mir auch Änderungen Ihrer Daten wie E-Mail-Adresse oder Postanschrift mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation über Auskunft, Berichtigung und Widerspruch zum Datenschutz über dieses Formular fünf Jahre lang archiviert.<br/></p>
+<p style=""><br/>Bitte verwenden Sie dieses Formular ausschließlich zur Wahrnehmung Ihrer Datenschutzrechte.<br/>Im Interesse beider Seiten empfehle ich, diese Anliegen ausschließlich schriftlich zu klären.<br/>Für alle anderen Formen der Kontaktaufnahme nutzen Sie bitte mein <a class="link" href="../kontakt-und-impressum/index.html">Kontaktformular</a>.<br/><br/>Mit diesem Formular können Sie mir auch Änderungen Ihrer Daten wie E-Mail-Adresse oder Postanschrift mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation über Auskunft, Berichtigung und Widerspruch zum Datenschutz über dieses Formular fünf Jahre lang archiviert.<br/></p>
 </div>
 <div class="sqrpara">
 <?php if ($success) { ?>
@@ -144,7 +144,7 @@ Sie sind hier:
 </ul>
 </div>
 <?php } ?>
-<form method="POST" action="datenschutzformular.php" class="sqrform" enctype="application/x-www-form-urlencoded" novalidate>
+<form method="POST" action="index.php" class="sqrform" enctype="application/x-www-form-urlencoded" novalidate>
 <div class="sqrformrow">
 <label class="sqrforml" for="privacy-form-vorname">Vorname:</label>
 <input class="sqrformr" type="text" id="privacy-form-vorname" name="first_name" value="<?php echo htmlspecialchars($firstName, ENT_QUOTES, 'UTF-8'); ?>" autocomplete="given-name" />
@@ -181,7 +181,7 @@ Sie sind hier:
 <?php } ?>
 </div>
 <div class="sqrpara">
-<a class="sqrbutton sqrprevpage" href="haftungsausschluss.html"><span>Haftungsausschluss</span></a>
+<a class="sqrbutton sqrprevpage" href="../haftungsausschluss/index.html"><span>Haftungsausschluss</span></a>
 </div>
 </div>
 </article>
