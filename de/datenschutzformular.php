@@ -1,4 +1,78 @@
-<?php @ini_set('default_charset','UTF-8'); ?><!DOCTYPE html>
+<?php
+@ini_set('default_charset', 'UTF-8');
+
+$errors = [];
+$success = false;
+$firstName = '';
+$lastName = '';
+$email = '';
+$cityAndPostalCode = '';
+$requestDetails = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $firstName = trim((string)($_POST['first_name'] ?? ''));
+    $lastName = trim((string)($_POST['last_name'] ?? ''));
+    $email = trim((string)($_POST['email'] ?? ''));
+    $cityAndPostalCode = trim((string)($_POST['city_postal_code'] ?? ''));
+    $requestDetails = trim((string)($_POST['request_details'] ?? ''));
+    $honeypot = trim((string)($_POST['website'] ?? ''));
+
+    if ($honeypot !== '') {
+        $errors[] = 'Das Formular wurde als automatisiert erkannt.';
+    }
+
+    if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Bitte geben Sie eine gültige E-Mail-Adresse an.';
+    }
+
+    if ($cityAndPostalCode === '') {
+        $errors[] = 'Bitte geben Sie Ihren Wohnort mit Postleitzahl an.';
+    }
+
+    if ($requestDetails === '') {
+        $errors[] = 'Bitte beschreiben Sie Ihr Anliegen.';
+    }
+
+    if (!$errors) {
+        $recipient = 'kontakt@haerle-kunstvermittlung.com';
+        $subject = 'Datenschutz-Anfrage über die Website';
+
+        $bodyLines = [
+            'Eine neue Datenschutz-Anfrage wurde über die deutsche Website gesendet.',
+            '',
+            'Vorname: ' . ($firstName !== '' ? $firstName : '—'),
+            'Nachname: ' . ($lastName !== '' ? $lastName : '—'),
+            'E-Mail: ' . $email,
+            'Ort / PLZ: ' . $cityAndPostalCode,
+            '',
+            'Anliegen:',
+            $requestDetails,
+        ];
+
+        $headers = [
+            'From: Härle Kunstvermittlung <kontakt@haerle-kunstvermittlung.com>',
+            'Reply-To: ' . $email,
+            'Content-Type: text/plain; charset=UTF-8',
+            'Content-Transfer-Encoding: 8bit',
+            'X-Mailer: PHP/' . PHP_VERSION,
+        ];
+
+        $mailSent = @mail(
+            $recipient,
+            '=?UTF-8?B?' . base64_encode($subject) . '?=',
+            implode("\n", $bodyLines),
+            implode("\r\n", $headers)
+        );
+
+        if ($mailSent) {
+            $success = true;
+            $firstName = $lastName = $email = $cityAndPostalCode = $requestDetails = '';
+        } else {
+            $errors[] = 'Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder schreiben Sie direkt eine E-Mail.';
+        }
+    }
+}
+?><!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -9,13 +83,12 @@
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" lang="de" content="" />
-<meta name="generator" content="SIQUANDO Shop 11 (#3837-5594)" />
 <link rel="stylesheet" type="text/css" href="../shared/assets/sf.css" />
 <link rel="stylesheet" type="text/css" href="../shared/assets/sd.css" />
 <link rel="stylesheet" type="text/css" href="../shared/assets/sc.css" />
 <link rel="canonical" href="http://engl.kunstvermittlung.haerle.art/datenschutzformular.php" />
 <script src="../shared/assets/jquery.js"></script>
-<script src="../shared/assets/navigation.js"></script> 
+<script src="../shared/assets/navigation.js"></script>
 <script src="../shared/assets/common.js"></script>
 <script src="../shared/assets/tallinnslider.js"></script>
 </head>
@@ -24,8 +97,8 @@
 
 <nav class="sqrnav">
 
-<a href="#" class="sqrnavshow">Navigation ffnen</a>
-<a href="#" class="sqrnavhide">Navigation schlieen</a>
+<a href="#" class="sqrnavshow">Navigation öffnen</a>
+<a href="#" class="sqrnavhide">Navigation schließen</a>
 	
 <ul>
 	
@@ -44,7 +117,7 @@
 </li>
 <li><a href="./kontakt-und-impressum/index.html"><span>Kontakt</span></a>
 </li>
-<li><a href="https://engl.haerle-kunstvermittlung.com/"><span>| englisch |</span></a>
+<li><a href="https://engl.haerle-kunstvermittlung.com/"><span>| Englisch |</span></a>
 </li>
 </ul>
 </nav>
@@ -78,60 +151,59 @@ Sie sind hier:
 </div>
 <div class="sqrpara">
 <h2 id="133425aef70a8b102">zur Nutzung Ihrer Rechte</h2>
-<p style=""><br/>Bitte verwenden Sie dieses Formular ausschließlich zur Nutzung Ihrer Datenschutzrechte.<br/>Hier empfehle ich in beiderseitigem Interesse die ausschließlich schriftliche Kommunikation.<br/>Verwenden Sie für alle anderen Formen der Kontaktaufnahme mein Kontaktformular.<br/><br/>Mit diesem Formular können Sie mir auch Änderungen Ihrer Daten wie E-Mail-Adresse oder Postadresse mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation über Information, Berichtigung und Widerspruch zum Datenschutz über dieses Formular 5 Jahre lang bei mir archiviert.<br/></p>
+<p style=""><br/>Bitte verwenden Sie dieses Formular ausschließlich zur Wahrnehmung Ihrer Datenschutzrechte.<br/>Im Interesse beider Seiten empfehle ich, diese Anliegen ausschließlich schriftlich zu klären.<br/>Für alle anderen Formen der Kontaktaufnahme nutzen Sie bitte mein <a class="link" href="./kontakt-und-impressum/index.html">Kontaktformular</a>.<br/><br/>Mit diesem Formular können Sie mir auch Änderungen Ihrer Daten wie E-Mail-Adresse oder Postanschrift mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation über Auskunft, Berichtigung und Widerspruch zum Datenschutz über dieses Formular fünf Jahre lang archiviert.<br/></p>
 </div>
 <div class="sqrpara">
-<?php
-	srand((double)microtime() * 1000000);
-	$fgwCaptchaId2 = rand(0, 32000);
-?>
-
-<form method="POST" action="./w2dfgw.php" class="sqrform sqrformcheck" enctype="application/x-www-form-urlencoded" data-captchaurl="./w2dcpchk.php">
-
-<input type="hidden" name="fgwemail" value="133425aef70a96905"/>
-<input type="hidden" name="fgwsubject" value="Feedback-Formular"/>
-<input type="hidden" name="fgwreturnurl" value="./vielen-dank.html"/>
-<div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-4">Vorname:</label>
-<input class="sqrformr" type="text" id="sqrform-133425aef70a96905-4" name="vname" value=""  />
+<?php if ($success) { ?>
+<div class="sqrform sqrformnotice">
+<p>Vielen Dank. Ihre Nachricht wurde erfolgreich versendet.</p>
 </div>
-<div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-5">Nachname:</label>
-<input class="sqrformr" type="text" id="sqrform-133425aef70a96905-5" name="nname" value=""  />
+<?php } else { ?>
+<?php if ($errors) { ?>
+<div class="sqrform sqrformnotice">
+<ul>
+<?php foreach ($errors as $error) { ?>
+<li><?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?></li>
+<?php } ?>
+</ul>
 </div>
-<div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-6">E-Mail: *</label>
-<input class="sqrformr" type="email" id="sqrform-133425aef70a96905-6" name="email" value="" required="required" />
+<?php } ?>
+<form method="POST" action="datenschutzformular.php" class="sqrform" enctype="application/x-www-form-urlencoded" novalidate>
+<div class="sqrformrow">
+<label class="sqrforml" for="privacy-form-vorname">Vorname:</label>
+<input class="sqrformr" type="text" id="privacy-form-vorname" name="first_name" value="<?php echo htmlspecialchars($firstName, ENT_QUOTES, 'UTF-8'); ?>" autocomplete="given-name" />
 </div>
-<div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-7">Ort (mit PLZ): *</label>
-<input class="sqrformr" type="text" id="sqrform-133425aef70a96905-7" name="ortmitplz" value="" required="required" />
+<div class="sqrformrow">
+<label class="sqrforml" for="privacy-form-nachname">Nachname:</label>
+<input class="sqrformr" type="text" id="privacy-form-nachname" name="last_name" value="<?php echo htmlspecialchars($lastName, ENT_QUOTES, 'UTF-8'); ?>" autocomplete="family-name" />
 </div>
-<div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-8">Anfrage | Korrektur | Widerspruch zu Ihren Daten: *</label>
-<textarea class="sqrformr" id="sqrform-133425aef70a96905-8" name="anfragekorrekturwiderspruchzuihrendaten" required="required"></textarea>
+<div class="sqrformrow">
+<label class="sqrforml" for="privacy-form-email">E-Mail: *</label>
+<input class="sqrformr" type="email" id="privacy-form-email" name="email" value="<?php echo htmlspecialchars($email, ENT_QUOTES, 'UTF-8'); ?>" required="required" autocomplete="email" />
 </div>
-<div>
-<label class="sqrforml">Sicherheitscode:</label>
-<label class="sqrformr">
-<img src="./w2dcpimg.php?id=<?php echo($fgwCaptchaId2); ?>" alt="" width="120" height="30"  />
-</label>
+<div class="sqrformrow">
+<label class="sqrforml" for="privacy-form-ort">Ort (mit PLZ): *</label>
+<input class="sqrformr" type="text" id="privacy-form-ort" name="city_postal_code" value="<?php echo htmlspecialchars($cityAndPostalCode, ENT_QUOTES, 'UTF-8'); ?>" required="required" autocomplete="address-level2" />
 </div>
-<div>
-<label for="sqrform-133425aef70a96905-captcha" class="sqrforml">Sicherheitscode wiederholen: *</label>
-<input type="text" class="sqrformr" id="sqrform-133425aef70a96905-captcha" name="fgwcaptchacode" maxlength="6" required="required" />
-<input type="hidden" name="fgwcaptchaid" value="<?php echo($fgwCaptchaId2); ?>"/>
-<input type="hidden" name="fgwuid" value="133425aef70a96905"/>
+<div class="sqrformrow">
+<label class="sqrforml" for="privacy-form-anliegen">Anfrage | Korrektur | Widerspruch zu Ihren Daten: *</label>
+<textarea class="sqrformr" id="privacy-form-anliegen" name="request_details" required="required"><?php echo htmlspecialchars($requestDetails, ENT_QUOTES, 'UTF-8'); ?></textarea>
 </div>
-<div>
-<p class="sqrformr">* Pflichtfelder, die ausgefllt werden mssen.</p>
+<div class="sqrformrow" style="display:none;">
+<label for="privacy-form-website">Website</label>
+<input type="text" id="privacy-form-website" name="website" tabindex="-1" autocomplete="off" />
+</div>
+<div class="sqrformrow">
+<p class="sqrformr">* Pflichtfelder, die ausgefüllt werden müssen.</p>
 </div>
 
-<div>
-  <input type="submit" value="absenden" />
+<div class="sqrformrow">
+  <input type="submit" value="Absenden" />
 </div>
 
-</form></div>
+</form>
+<?php } ?>
+</div>
 <div class="sqrpara">
 <a class="sqrbutton sqrprevpage" href="haftungsausschluss.html"><span>Haftungsausschluss</span></a>
 </div>
