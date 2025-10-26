@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 <div class="sqrpara">
 <h2 id="133425aef70a8b102">Exercise your rights</h2>
-<p style=""><br/>Please use this form exclusively to exercise your data protection rights.<br/>In the interest of both parties, I recommend handling these matters in writing only.<br/>For all other enquiries, please use my <a class="link" href="./kontakt-und-impressum/index.html">contact form</a>.<br/><br/>You can also use this form to inform me of changes to your data, such as your email or postal address.<br/><br/>For documentation purposes, communication regarding information, rectification, or objections to data processing submitted via this form is archived for five years.<br/></p>
+<p style=""><br/>Please use this form exclusively to exercise your data protection rights.<br/>In the interest of both parties, I recommend handling these matters in writing only.<br/>For all other enquiries, please use my <a class="link" href="./contact-and-legal-notice/index.html">contact form</a>.<br/><br/>You can also use this form to inform me of changes to your data, such as your email or postal address.<br/><br/>For documentation purposes, communication regarding information, rectification, or objections to data processing submitted via this form is archived for five years.<br/></p>
 </div>
 <div class="sqrpara">
 <?php if ($success) { ?>

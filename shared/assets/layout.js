@@ -7,12 +7,12 @@
       navHide: 'Close navigation',
       home: { id: 'home', label: '>' },
       navItems: [
-        { id: 'ueber-uns', href: 'ueber-uns/index.html', label: 'About me' },
-        { id: 'unsere-leistung', href: 'unsere-leistung/index.html', label: 'My services' },
-        { id: 'netzwerk', href: 'netzwerk/index.html', label: 'About my network' },
-        { id: 'kunst-als-kapitalanlage', href: 'kunst-als-kapitalanlage/index.html', label: 'Art as an investment' },
-        { id: 'ausstellungen', href: 'ausstellungen/index.html', label: 'Exhibitions (museums)' },
-        { id: 'kontakt-und-impressum', href: 'kontakt-und-impressum/index.html', label: 'Contact and legal notice' }
+        { id: 'about-us', href: 'about-us/index.html', label: 'About me' },
+        { id: 'my-services', href: 'my-services/index.html', label: 'My services' },
+        { id: 'network', href: 'network/index.html', label: 'About my network' },
+        { id: 'art-as-investment', href: 'art-as-investment/index.html', label: 'Art as an investment' },
+        { id: 'exhibitions', href: 'exhibitions/index.html', label: 'Exhibitions (museums)' },
+        { id: 'contact-and-legal-notice', href: 'contact-and-legal-notice/index.html', label: 'Contact and legal notice' }
       ],
       footerLinks: [
         { href: 'imprint.html', label: 'Imprint' },
@@ -21,20 +21,20 @@
         { href: 'disclaimer.html', label: 'Disclaimer' },
         { href: 'privacy-form.php', label: 'Privacy form' }
       ],
-      quickLinksBase: ['home', 'ueber-uns', 'unsere-leistung', 'netzwerk', 'kunst-als-kapitalanlage', 'ausstellungen', 'kontakt-und-impressum'],
+      quickLinksBase: ['home', 'about-us', 'my-services', 'network', 'art-as-investment', 'exhibitions', 'contact-and-legal-notice'],
       quickLinksLabels: {
         home: 'HOME',
-        'ueber-uns': 'About me',
-        'unsere-leistung': 'My services',
-        netzwerk: 'About my network',
-        'kunst-als-kapitalanlage': 'Art as an investment',
-        ausstellungen: 'Exhibitions (museums)',
-        'kontakt-und-impressum': 'Contact and legal notice',
-        'aktuelle-kuenstler': 'Current artists',
+        'about-us': 'About me',
+        'my-services': 'My services',
+        network: 'About my network',
+        'art-as-investment': 'Art as an investment',
+        exhibitions: 'Exhibitions (museums)',
+        'contact-and-legal-notice': 'Contact and legal notice',
+        'current-artists': 'Current artists',
         downloads: 'Downloads'
       },
       quickLinksPaths: {
-        'aktuelle-kuenstler': 'aktuelle-kuenstler/index.html',
+        'current-artists': 'current-artists/index.html',
         downloads: 'downloads/index.html'
       },
       languageSwitchLabel: '| German |'
