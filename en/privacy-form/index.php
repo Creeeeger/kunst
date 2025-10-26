@@ -83,9 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="author" content="" />
 <meta name="description" content="" />
 <meta name="keywords" lang="en" content="" />
-<link rel="stylesheet" type="text/css" href="../../shared/assets/sf.css" />
-<link rel="stylesheet" type="text/css" href="../../shared/assets/sd.css" />
-<link rel="stylesheet" type="text/css" href="../../shared/assets/sc.css" />
+<link rel="stylesheet" type="text/css" href="../../shared/assets/site.css" />
 <link rel="canonical" href="/en/privacy-form/" />
 <script src="../../shared/assets/jquery.js"></script>
 <script src="../../shared/assets/layout.js"></script>
