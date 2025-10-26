@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting …</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="/de/index.html">
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/de/index.html">
+  </noscript>
+  <script>
+    (function() {
+      'use strict';
+
+      function normalise(code) {
+        if (!code) return '';
+        return String(code).toLowerCase();
+      }
+
+      function preferredLanguages() {
+        var seen = {};
+        var result = [];
+        var list = [];
+        if (Array.isArray(navigator.languages)) {
+          list = list.concat(navigator.languages);
+        }
+        list.push(navigator.language || navigator.userLanguage || '');
+        for (var i = 0; i < list.length; i += 1) {
+          var value = normalise(list[i]);
+          if (!value || seen[value]) continue;
+          seen[value] = true;
+          result.push(value);
+        }
+        return result;
+      }
+
+      function targetFor(languages) {
+        for (var i = 0; i < languages.length; i += 1) {
+          if (languages[i].indexOf('en') === 0) {
+            return '/en/index.html';
+          }
+          if (languages[i].indexOf('de') === 0) {
+            return '/de/index.html';
+          }
+        }
+        return '/de/index.html';
+      }
+
+      var languages = preferredLanguages();
+      var target = targetFor(languages);
+      var canonical = document.querySelector('link[rel="canonical"]');
+      var origin = window.location.origin || '';
+      if (canonical) {
+        canonical.setAttribute('href', origin ? origin + target : target);
+      }
+      if (window.location.pathname !== target) {
+        window.location.replace(target);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to the appropriate language version …</p>
+  <p>
+    <a href="/de/index.html">Zur deutschen Seite</a> ·
+    <a href="/en/index.html">Go to the English site</a>
+  </p>
+  <p>JavaScript is required for automatic language detection. Please choose your language above.</p>
+</body>
+</html>
