@@ -1,9 +1,9 @@
-<?php @ini_set('default_charset','ISO-8859-1'); ?><!DOCTYPE html>
+<?php @ini_set('default_charset','UTF-8'); ?><!DOCTYPE html>
 <html lang="de">
 
 <head>
 <title>Datenschutzformular</title>
-<meta charset="ISO-8859-1" />
+<meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="" />
@@ -32,7 +32,7 @@
 <li class="sqrnavhome"><a href="./index.html"><span>Startseite</span></a></li>
 
 	
-<li><a href="./ueber-uns/index.html"><span>&Uuml;ber mich</span></a>
+<li><a href="./ueber-uns/index.html"><span>Über mich</span></a>
 </li>
 <li><a href="./unsere-leistung/index.html"><span>Meine Leistung</span></a>
 </li>
@@ -78,7 +78,7 @@ Sie sind hier:
 </div>
 <div class="sqrpara">
 <h2 id="133425aef70a8b102">zur Nutzung Ihrer Rechte</h2>
-<p style=""><br/>Bitte verwenden Sie dieses Formular ausschlie&szlig;lich zur Nutzung Ihrer Datenschutzrechte.<br/>Hier empfehle ich in beiderseitigem Interesse die ausschlie&szlig;lich schriftliche Kommunikation.<br/>Verwenden Sie f&uuml;r alle anderen Formen der Kontaktaufnahme mein &gt; Kontaktformular.<br/><br/>Mit diesem Formular k&ouml;nnen Sie mir auch &Auml;nderungen Ihrer Daten wie eMail-Adresse oder Postadresse mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation &uuml;ber Information, Berichtigung und Widerspruch zum Datenschutz &uuml;ber dieses Formular 5 Jahre lang bei mir archiviert.<br/></p>
+<p style=""><br/>Bitte verwenden Sie dieses Formular ausschließlich zur Nutzung Ihrer Datenschutzrechte.<br/>Hier empfehle ich in beiderseitigem Interesse die ausschließlich schriftliche Kommunikation.<br/>Verwenden Sie für alle anderen Formen der Kontaktaufnahme mein Kontaktformular.<br/><br/>Mit diesem Formular können Sie mir auch Änderungen Ihrer Daten wie E-Mail-Adresse oder Postadresse mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation über Information, Berichtigung und Widerspruch zum Datenschutz über dieses Formular 5 Jahre lang bei mir archiviert.<br/></p>
 </div>
 <div class="sqrpara">
 <?php
@@ -100,15 +100,15 @@ Sie sind hier:
 <input class="sqrformr" type="text" id="sqrform-133425aef70a96905-5" name="nname" value=""  />
 </div>
 <div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-6">E-Mail:&nbsp;*</label>
+<label class="sqrforml" for="sqrform-133425aef70a96905-6">E-Mail: *</label>
 <input class="sqrformr" type="email" id="sqrform-133425aef70a96905-6" name="email" value="" required="required" />
 </div>
 <div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-7">Ort (mit PLZ):&nbsp;*</label>
+<label class="sqrforml" for="sqrform-133425aef70a96905-7">Ort (mit PLZ): *</label>
 <input class="sqrformr" type="text" id="sqrform-133425aef70a96905-7" name="ortmitplz" value="" required="required" />
 </div>
 <div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-8">Anfrage | Korrektur | Widerspruch zu Ihren Daten:&nbsp;*</label>
+<label class="sqrforml" for="sqrform-133425aef70a96905-8">Anfrage | Korrektur | Widerspruch zu Ihren Daten: *</label>
 <textarea class="sqrformr" id="sqrform-133425aef70a96905-8" name="anfragekorrekturwiderspruchzuihrendaten" required="required"></textarea>
 </div>
 <div>
@@ -118,7 +118,7 @@ Sie sind hier:
 </label>
 </div>
 <div>
-<label for="sqrform-133425aef70a96905-captcha" class="sqrforml">Sicherheitscode wiederholen:&nbsp;*</label>
+<label for="sqrform-133425aef70a96905-captcha" class="sqrforml">Sicherheitscode wiederholen: *</label>
 <input type="text" class="sqrformr" id="sqrform-133425aef70a96905-captcha" name="fgwcaptchacode" maxlength="6" required="required" />
 <input type="hidden" name="fgwcaptchaid" value="<?php echo($fgwCaptchaId2); ?>"/>
 <input type="hidden" name="fgwuid" value="133425aef70a96905"/>
@@ -150,7 +150,7 @@ Sie sind hier:
 <a href="./datenschutzformular.php">Datenschutzformular</a>
 </div>
 <div class="sqrfootertext">
-(c) H&auml;rle 2025</div>
+(c) Härle 2025</div>
 </footer>
 
 </body>

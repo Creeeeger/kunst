@@ -208,7 +208,7 @@ function deSlash(&$element) {
 
 // Hauptprogramm
 
-@ini_set('default_charset','ISO-8859-1');
+@ini_set('default_charset','UTF-8');
 
 //////////////////////////////////////////////////////////////////////////
 //

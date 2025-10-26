@@ -1,9 +1,9 @@
-<?php @ini_set('default_charset','ISO-8859-1'); ?><!DOCTYPE html>
+<?php @ini_set('default_charset','UTF-8'); ?><!DOCTYPE html>
 <html lang="en">
 
 <head>
 <title>Privacy form</title>
-<meta charset="ISO-8859-1" />
+<meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="" />
@@ -69,7 +69,7 @@
 </div>
 <div class="sqrpara">
 <h2 id="133425aef70a8b102">Exercise your rights</h2>
-<p style=""><br/>Please use this form exclusively to exercise your data protection rights.<br/>In the interest of both parties, I recommend handling these matters in writing only.<br/>For all other enquiries, please use my &gt; contact form.<br/><br/>You can also use this form to inform me of changes to your data, such as your email or postal address.<br/><br/>For documentation purposes, communication regarding information, rectification, or objections to data processing submitted via this form is archived for five years.<br/></p>
+<p style=""><br/>Please use this form exclusively to exercise your data protection rights.<br/>In the interest of both parties, I recommend handling these matters in writing only.<br/>For all other enquiries, please use my > contact form.<br/><br/>You can also use this form to inform me of changes to your data, such as your email or postal address.<br/><br/>For documentation purposes, communication regarding information, rectification, or objections to data processing submitted via this form is archived for five years.<br/></p>
 </div>
 <div class="sqrpara">
 <?php
@@ -91,15 +91,15 @@
 <input class="sqrformr" type="text" id="sqrform-133425aef70a96905-5" name="nname" value=""  />
 </div>
 <div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-6">Email:&nbsp;*</label>
+<label class="sqrforml" for="sqrform-133425aef70a96905-6">Email: *</label>
 <input class="sqrformr" type="email" id="sqrform-133425aef70a96905-6" name="email" value="" required="required" />
 </div>
 <div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-7">City and postal code:&nbsp;*</label>
+<label class="sqrforml" for="sqrform-133425aef70a96905-7">City and postal code: *</label>
 <input class="sqrformr" type="text" id="sqrform-133425aef70a96905-7" name="ortmitplz" value="" required="required" />
 </div>
 <div>
-<label class="sqrforml" for="sqrform-133425aef70a96905-8">Request | correction | objection regarding your data:&nbsp;*</label>
+<label class="sqrforml" for="sqrform-133425aef70a96905-8">Request | correction | objection regarding your data: *</label>
 <textarea class="sqrformr" id="sqrform-133425aef70a96905-8" name="anfragekorrekturwiderspruchzuihrendaten" required="required"></textarea>
 </div>
 <div>
@@ -109,7 +109,7 @@
 </label>
 </div>
 <div>
-<label for="sqrform-133425aef70a96905-captcha" class="sqrforml">Repeat security code:&nbsp;*</label>
+<label for="sqrform-133425aef70a96905-captcha" class="sqrforml">Repeat security code: *</label>
 <input type="text" class="sqrformr" id="sqrform-133425aef70a96905-captcha" name="fgwcaptchacode" maxlength="6" required="required" />
 <input type="hidden" name="fgwcaptchaid" value="<?php echo($fgwCaptchaId2); ?>"/>
 <input type="hidden" name="fgwuid" value="133425aef70a96905"/>
@@ -141,7 +141,7 @@
 <a href="./privacy-form.php">Privacy form</a>
 </div>
 <div class="sqrfootertext">
-(c) H&auml;rle 2025</div>
+(c) Härle 2025</div>
 </footer>
 
 </body>
