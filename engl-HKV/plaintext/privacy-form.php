@@ -4,12 +4,12 @@
 <head>
 <title>Privacy form</title>
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="en">
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 <meta http-equiv="expires" content="0">
 <meta name="author" content="">
 <meta name="description" content="">
-<meta name="keywords" lang="de" content="">
+<meta name="keywords" lang="en" content="">
 <meta name="generator" content="SIQUANDO Shop 11 (#3837-5594)">
 <link rel="canonical" href="https://engl.haerle-kunstvermittlung.com/privacy-form.php" >
 <link rel="stylesheet" type="text/css" href="./assets/s.css">
@@ -42,9 +42,9 @@
 
 <h1>Privacy form</h1>
 
-	<h2>zur Nutzung Ihrer Rechte</h2>
+	<h2>Exercise your rights</h2>
 
-	<p><br>Bitte verwenden Sie dieses Formular ausschlie&szlig;lich zur Nutzung Ihrer Datenschutzrechte.<br>Hier empfehle ich in beiderseitigem Interesse die ausschlie&szlig;lich schriftliche Kommunikation.<br>Verwenden Sie f&uuml;r alle anderen Formen der Kontaktaufnahme mein &gt; Kontaktformular.<br><br>Mit diesem Formular k&ouml;nnen Sie mir auch &Auml;nderungen Ihrer Daten wie eMail-Adresse oder Postadresse mitteilen.<br><br>Zur Dokumentation wird die Kommunikation &uuml;ber Information, Berichtigung und Widerspruch zum Datenschutz &uuml;ber dieses Formular 5 Jahre lang bei mir archiviert.<br></p>
+	<p><br>Please use this form exclusively to exercise your data protection rights.<br>In the interest of both parties, I recommend handling these matters in writing only.<br>For all other enquiries, please use my &gt; contact form.<br><br>You can also use this form to inform me of changes to your data, such as your email or postal address.<br><br>For documentation purposes, communication regarding information, rectification, or objections to data processing submitted via this form is archived for five years.<br></p>
 		<h2></h2>
 
 	<!-- $Id: form.ccml 24 2014-06-01 16:22:30Z volker $ -->
@@ -204,17 +204,17 @@ function check_result2() {
 
 	var alerts = new Array();
 	if (validate)
-		alerts.push('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
-	if (required)
-		alerts.push('Bitte füllen Sie alle Pflichtfelder aus.');
-	if (captcha)
-		alerts.push('Der Sicherheitscode ist falsch.');
-	if (nocaptcha)
-		alerts.push('Bitte füllen Sie den Sicherheitscode aus, dieser dient als Schutz vor Missbrauch.');
-
-	if (alerts.length) {
-		document.getElementById('myerror').innerHTML = alerts.join("<br />") + '<br />&nbsp;';
-		if (first) {
+		alerts.push('Der Security code ist falsch.');
+		alerts.push('Bitte fllen Sie den Security code aus, dieser dient als Schutz vor Missbrauch.');
+		<td>First name</td>
+		<td>Last name</td>
+		<td>Email *</td>
+		<td>City and postal code *</td>
+		<td valign="top">Request | correction | objection regarding your data *</td>
+		<td>Security code</td>
+		<td>Security code wiederholen *</td>
+								type="submit" value="Submit"
+	  <p><strong>Go to:</strong>
 			eval('document.sendform2.' + first + '.focus();');
 			eval('document.sendform2.' + first + '.select();');
 		}
@@ -287,7 +287,7 @@ function check_result2() {
 		<td><input type="hidden" name="fgwuid" value="133425aef70a96905"/></td>
 	</tr>
 	<tr>
-		<td colspan="2">* Pflichtfelder, die ausgefüllt werden müssen.</td>
+		<td colspan="2">* Pflichtfelder, die ausgefÃ¼llt werden mÃ¼ssen.</td>
 	</tr>
 </table>
 <br />
