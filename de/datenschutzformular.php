@@ -97,8 +97,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <nav class="sqrnav">
 
-<a href="#" class="sqrnavshow">Navigation ffnen</a>
-<a href="#" class="sqrnavhide">Navigation schlieen</a>
+<a href="#" class="sqrnavshow">Navigation öffnen</a>
+<a href="#" class="sqrnavhide">Navigation schließen</a>
 	
 <ul>
 	
@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </li>
 <li><a href="./kontakt-und-impressum/index.html"><span>Kontakt</span></a>
 </li>
-<li><a href="https://engl.haerle-kunstvermittlung.com/"><span>| englisch |</span></a>
+<li><a href="https://engl.haerle-kunstvermittlung.com/"><span>| Englisch |</span></a>
 </li>
 </ul>
 </nav>
@@ -151,7 +151,7 @@ Sie sind hier:
 </div>
 <div class="sqrpara">
 <h2 id="133425aef70a8b102">zur Nutzung Ihrer Rechte</h2>
-<p style=""><br/>Bitte verwenden Sie dieses Formular ausschließlich zur Nutzung Ihrer Datenschutzrechte.<br/>Hier empfehle ich in beiderseitigem Interesse die ausschließlich schriftliche Kommunikation.<br/>Verwenden Sie für alle anderen Formen der Kontaktaufnahme mein Kontaktformular.<br/><br/>Mit diesem Formular können Sie mir auch Änderungen Ihrer Daten wie E-Mail-Adresse oder Postadresse mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation über Information, Berichtigung und Widerspruch zum Datenschutz über dieses Formular 5 Jahre lang bei mir archiviert.<br/></p>
+<p style=""><br/>Bitte verwenden Sie dieses Formular ausschließlich zur Wahrnehmung Ihrer Datenschutzrechte.<br/>Im Interesse beider Seiten empfehle ich, diese Anliegen ausschließlich schriftlich zu klären.<br/>Für alle anderen Formen der Kontaktaufnahme nutzen Sie bitte mein <a class="link" href="./kontakt-und-impressum/index.html">Kontaktformular</a>.<br/><br/>Mit diesem Formular können Sie mir auch Änderungen Ihrer Daten wie E-Mail-Adresse oder Postanschrift mitteilen.<br/><br/>Zur Dokumentation wird die Kommunikation über Auskunft, Berichtigung und Widerspruch zum Datenschutz über dieses Formular fünf Jahre lang archiviert.<br/></p>
 </div>
 <div class="sqrpara">
 <?php if ($success) { ?>
