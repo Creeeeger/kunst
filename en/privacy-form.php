@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <link rel="stylesheet" type="text/css" href="../shared/assets/sf.css" />
 <link rel="stylesheet" type="text/css" href="../shared/assets/sd.css" />
 <link rel="stylesheet" type="text/css" href="../shared/assets/sc.css" />
-<link rel="canonical" href="https://engl.haerle-kunstvermittlung.com/privacy-form.php" />
+<link rel="canonical" href="/en/privacy-form.php" />
 <script src="../shared/assets/jquery.js"></script>
 <script src="../shared/assets/layout.js"></script>
 <script src="../shared/assets/navigation.js"></script>
