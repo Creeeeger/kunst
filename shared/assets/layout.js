@@ -15,11 +15,11 @@
         { id: 'contact-and-legal-notice', href: 'contact-and-legal-notice/index.html', label: 'Contact and legal notice' }
       ],
       footerLinks: [
-        { href: 'imprint.html', label: 'Imprint' },
-        { href: 'cookies.html', label: 'Cookies' },
-        { href: 'privacy.html', label: 'Privacy' },
-        { href: 'disclaimer.html', label: 'Disclaimer' },
-        { href: 'privacy-form.php', label: 'Privacy form' }
+        { href: 'imprint/index.html', label: 'Imprint' },
+        { href: 'cookies/index.html', label: 'Cookies' },
+        { href: 'privacy/index.html', label: 'Privacy' },
+        { href: 'disclaimer/index.html', label: 'Disclaimer' },
+        { href: 'privacy-form/index.php', label: 'Privacy form' }
       ],
       quickLinksBase: ['home', 'about-us', 'my-services', 'network', 'art-as-investment', 'exhibitions', 'contact-and-legal-notice'],
       quickLinksLabels: {
@@ -52,11 +52,11 @@
         { id: 'kontakt-und-impressum', href: 'kontakt-und-impressum/index.html', label: 'Kontakt' }
       ],
       footerLinks: [
-        { href: 'impressum.html', label: 'Impressum' },
-        { href: 'cookies.html', label: 'Cookies' },
-        { href: 'datenschutz.html', label: 'Datenschutz' },
-        { href: 'haftungsausschluss.html', label: 'Haftungsausschluss' },
-        { href: 'datenschutzformular.php', label: 'Datenschutzformular' }
+        { href: 'impressum/index.html', label: 'Impressum' },
+        { href: 'cookies/index.html', label: 'Cookies' },
+        { href: 'datenschutz/index.html', label: 'Datenschutz' },
+        { href: 'haftungsausschluss/index.html', label: 'Haftungsausschluss' },
+        { href: 'datenschutzformular/index.php', label: 'Datenschutzformular' }
       ],
       quickLinksBase: ['home', 'ueber-uns', 'unsere-leistung', 'netzwerk', 'kunst-als-kapitalanlage', 'ausstellungen', 'kontakt-und-impressum'],
       quickLinksLabels: {
