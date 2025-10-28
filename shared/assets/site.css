@@ -251,6 +251,7 @@ footer {
   margin: 0;
   padding: 30px 0 0 0;
 }
+
 .sqrcommonlinks, .sqrfootertext {
   max-width: 1100px;
   margin: 0 auto;
@@ -258,13 +259,22 @@ footer {
   box-sizing: border-box;
   text-align: center;
 }
+
+.sqrcommonlinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+}
+
 .sqrfootertext {
   color: #f2eff4;
 }
+
 .sqrcommonlinks a {
   text-decoration: none;
   color: #f2eff4;
-  padding: 0 8px;
+  padding: 4px 8px;
   transition: color 0.3s;
 }
 .sqrcommonlinks a:hover {
