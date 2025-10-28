@@ -1,35 +1,66 @@
 (function($) {
   'use strict';
-  $.fn.sqrNav = function() {
-    $(this).each(function() {
 
+  function createNamespace() {
+    return '.sqrnav' + Math.random().toString(36).slice(2);
+  }
+
+  $.fn.sqrNav = function() {
+    return $(this).each(function() {
       var nav = $(this);
-      var showNav = nav.find('.sqrnavshow');
-      var hideNav = nav.find('.sqrnavhide');
-      var allItems = nav.find('li:has(ul)');
+
+      if (nav.data('sqrNavInitialized')) {
+        var refreshFn = nav.data('sqrNavRefresh');
+        if (typeof refreshFn === 'function') {
+          refreshFn();
+        }
+        return;
+      }
+
+      var allItems = $();
       var lastitem;
       var doubleClickTimeout;
       var doubleclick = false;
+      var observer;
+      var namespace = createNamespace();
+
+      function refreshItems() {
+        nav.find('li.sqrnavmore').removeClass('sqrnavmore');
+        allItems = nav.find('li:has(ul)');
+        if (allItems.length) {
+          allItems.addClass('sqrnavmore');
+        }
+      }
+
+      function clearDoubleClickTimer() {
+        if (doubleClickTimeout !== undefined) {
+          window.clearTimeout(doubleClickTimeout);
+          doubleClickTimeout = undefined;
+        }
+      }
 
       function handleClick(e) {
-
         if (lastitem === this && doubleclick) return;
 
-        if (doubleClickTimeout !== undefined) window.clearTimeout(doubleClickTimeout);
+        clearDoubleClickTimer();
 
         doubleclick = true;
 
         doubleClickTimeout = window.setTimeout(function() {
           doubleclick = false;
+          doubleClickTimeout = undefined;
         }, 1000);
 
-        if ($(this).parent().hasClass('sqrnavopen')) {
-          $(this).parent('li').removeClass('sqrnavopen');
+        var parent = $(this).parent('li');
+
+        if (parent.hasClass('sqrnavopen')) {
+          parent.removeClass('sqrnavopen');
         } else {
           lastitem = this;
           allItems.removeClass('sqrnavopen');
-          $(this).parents('li').addClass('sqrnavopen');
-          $(this).parent('li').find('input').focus();
+          parent.parents('li').addClass('sqrnavopen');
+          parent.addClass('sqrnavopen');
+          parent.find('input').first().trigger('focus');
         }
 
         e.preventDefault();
@@ -47,7 +78,7 @@
             nav.removeClass('sqrnavopen');
             lastitem = undefined;
             doubleclick = false;
-            if (doubleClickTimeout !== undefined) window.clearTimeout(doubleClickTimeout);
+            clearDoubleClickTimer();
           }
         }
       }
@@ -59,19 +90,62 @@
 
       function handleHideNav(e) {
         nav.removeClass('sqrnavopen');
+        allItems.removeClass('sqrnavopen');
+        lastitem = undefined;
+        doubleclick = false;
+        clearDoubleClickTimer();
         e.preventDefault();
       }
 
-      allItems.addClass('sqrnavmore').children('a').on('click', handleClick);
-      showNav.on('click', handleShowNav);
-      hideNav.on('click', handleHideNav);
-      $(document).on('click touchstart', handleClose);
+      function handleNavLinkFollow(e) {
+        if (!isMobile()) {
+          return;
+        }
 
+        var parent = $(this).parent('li');
+
+        if (parent.hasClass('sqrnavmore')) {
+          return;
+        }
+
+        window.setTimeout(function() {
+          nav.removeClass('sqrnavopen');
+          allItems.removeClass('sqrnavopen');
+          lastitem = undefined;
+          doubleclick = false;
+          clearDoubleClickTimer();
+        }, 0);
+      }
+
+      nav.on('click' + namespace, '.sqrnavshow', handleShowNav);
+      nav.on('click' + namespace, '.sqrnavhide', handleHideNav);
+      nav.on('click' + namespace, 'li.sqrnavmore > a', handleClick);
+      nav.on('click' + namespace, 'ul > li > a', handleNavLinkFollow);
+      $(document).on('click' + namespace + ' touchstart' + namespace, handleClose);
+
+      function startObserver() {
+        if (!nav.length || !window.MutationObserver) {
+          refreshItems();
+          return;
+        }
+
+        observer = new window.MutationObserver(function() {
+          refreshItems();
+        });
+
+        observer.observe(nav.get(0), { childList: true, subtree: true });
+        refreshItems();
+      }
+
+      startObserver();
+
+      nav.data('sqrNavInitialized', true);
+      nav.data('sqrNavRefresh', refreshItems);
+      nav.data('sqrNavObserver', observer);
     });
-
   };
 })(jQuery);
 
-$(document).ready(function() {
+$(function() {
   $('.sqrnav').sqrNav();
 });
