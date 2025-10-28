@@ -5,7 +5,7 @@
     en: {
       navShow: 'Open navigation',
       navHide: 'Close navigation',
-      home: { id: 'home', label: '>' },
+      home: { id: 'home', label: 'Home' },
       navItems: [
         { id: 'about-us', href: 'about-us/index.html', label: 'About me' },
         { id: 'my-services', href: 'my-services/index.html', label: 'My services' },

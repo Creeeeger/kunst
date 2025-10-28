@@ -289,6 +289,8 @@ footer {
   -webkit-user-select: none;
   user-select: none;
   line-height: 21px;
+  position: relative;
+  transition: box-shadow 0.35s ease;
 }
 .sqrnav a {
   display: block;
@@ -352,6 +354,9 @@ footer {
   .sqrnav li.sqrnavopen>a {
     background-image: url(moredown.svg);
   }
+  .sqrnav {
+    box-shadow: none;
+  }
   .sqrnav .sqrnavshow {
     display: block;
   }
@@ -364,26 +369,43 @@ footer {
   .sqrnavopen>a.sqrnavhide {
     display: block;
   }
-  .sqrnav li.sqrnavopen>ul {
-    display: block;
-  }
   .sqrnav ul {
-    display: none;
     margin: 0 auto;
     padding: 0;
     list-style: none;
   }
+  .sqrnav>ul {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-12px);
+    transition: max-height 0.35s ease, opacity 0.3s ease, transform 0.35s ease;
+    pointer-events: none;
+  }
+  .sqrnav.sqrnavopen {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+  .sqrnav.sqrnavopen>ul {
+    max-height: 80vh;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
   .sqrnav ul ul {
-    display: none;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .sqrnav li.sqrnavopen>ul {
+    max-height: 60vh;
   }
   .sqrnav ul li li>a {
     padding-left: 44px;
   }
   .sqrnav ul li li li>a {
     padding-left: 66px;
-  }
-  .sqrnavopen>ul {
-    display: block;
   }
 }
 @media screen and (min-width: 768px) {
@@ -398,6 +420,10 @@ footer {
     padding: 0;
     list-style: none;
     width: 100%;
+    max-height: none;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
   .sqrnav>ul:after {
     visibility: hidden;
