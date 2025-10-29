@@ -78,6 +78,177 @@
     }
   };
 
+  const SEO_CONFIG = {
+    en: {
+      settings: {
+        siteName: 'Dagmar Härle Art Advisory',
+        locale: 'en_GB',
+        alternateLocale: 'de_DE'
+      },
+      pages: {
+        home: {
+          title: 'Dagmar Härle Art Advisory – Acquire & sell fine art with confidence',
+          description: 'Dagmar Härle Art Advisory connects collectors, investors, and sellers of high-value art through bespoke guidance and a trusted international network.',
+          keywords: 'Art advisory, art brokerage, buy art, sell art, Dagmar Härle'
+        },
+        'about-us': {
+          title: 'About Dagmar Härle – Art advisor with a strong international network',
+          description: 'Learn more about art advisor Dagmar Härle and her decades of experience connecting art buyers and sellers around the world.',
+          keywords: 'Dagmar Härle, art advisor, art brokerage, art consulting'
+        },
+        'my-services': {
+          title: 'Services – Personal art brokerage & consulting by Dagmar Härle',
+          description: 'Discover the services offered by Dagmar Härle Art Advisory: valuations, sales strategies, acquisitions, and bespoke art concepts.',
+          keywords: 'Art consulting services, art valuation, art acquisition, bespoke art concepts'
+        },
+        network: {
+          title: 'Network – Trusted partners of Dagmar Härle Art Advisory',
+          description: 'Meet the trusted network of museums, galleries, experts, and collectors that collaborate with Dagmar Härle Art Advisory.',
+          keywords: 'Art network, art galleries, museum partners, art collectors'
+        },
+        'art-as-investment': {
+          title: 'Art as an investment – Strategic guidance by Dagmar Härle',
+          description: 'Guidance on how to position art as an investment asset with the expertise of Dagmar Härle Art Advisory.',
+          keywords: 'Art investment, art strategy, art portfolio, art advisor'
+        },
+        exhibitions: {
+          title: 'Exhibitions – Museum collaborations curated with Dagmar Härle',
+          description: 'Highlights of museum exhibitions and collaborations curated and supported by Dagmar Härle Art Advisory.',
+          keywords: 'Art exhibitions, museum collaborations, curated art shows'
+        },
+        'contact-and-legal-notice': {
+          title: 'Contact & legal notice – Dagmar Härle Art Advisory',
+          description: 'Contact Dagmar Härle Art Advisory – address, email, legal notice, and imprint information in English.',
+          keywords: 'Art advisory contact, Dagmar Härle contact, legal notice'
+        },
+        'current-artists': {
+          title: 'Current artists – Works available via Dagmar Härle Art Advisory',
+          description: 'Explore the outstanding works and current artists represented by Dagmar Härle Art Advisory.',
+          keywords: 'Current artists, art portfolio, artworks for sale'
+        },
+        downloads: {
+          title: 'Downloads – Resources from Dagmar Härle Art Advisory',
+          description: 'Downloads from Dagmar Härle Art Advisory including forms, brochures, and key information for clients.',
+          keywords: 'Art advisory downloads, art forms, art resources'
+        },
+        cookies: {
+          title: 'Cookies – Dagmar Härle Art Advisory',
+          description: 'Cookie information for the Dagmar Härle Art Advisory website.',
+          keywords: 'Cookie policy, website cookies'
+        },
+        privacy: {
+          title: 'Privacy policy – Dagmar Härle Art Advisory',
+          description: 'Privacy policy of Dagmar Härle Art Advisory explaining how personal data is protected.',
+          keywords: 'Privacy policy, data protection, art advisory privacy'
+        },
+        'privacy-form': {
+          title: 'Privacy request form – Dagmar Härle Art Advisory',
+          description: 'Online privacy request form for Dagmar Härle Art Advisory clients and partners.',
+          keywords: 'Privacy form, data request form'
+        },
+        disclaimer: {
+          title: 'Disclaimer – Dagmar Härle Art Advisory',
+          description: 'Disclaimer for the Dagmar Härle Art Advisory website.',
+          keywords: 'Disclaimer, legal notice'
+        },
+        imprint: {
+          title: 'Imprint – Dagmar Härle Art Advisory',
+          description: 'Imprint of Dagmar Härle Art Advisory – legal information and company details.',
+          keywords: 'Imprint, company information, legal disclosure'
+        },
+        'thank-you': {
+          title: 'Thank you – Dagmar Härle Art Advisory',
+          description: 'Thank you for contacting Dagmar Härle Art Advisory. We will be in touch shortly.',
+          keywords: 'Thank you, contact confirmation'
+        }
+      }
+    },
+    de: {
+      settings: {
+        siteName: 'Dagmar Härle Kunstvermittlung',
+        locale: 'de_DE',
+        alternateLocale: 'en_GB'
+      },
+      pages: {
+        home: {
+          title: 'Dagmar Härle Kunstvermittlung – Kunst verkaufen & kaufen',
+          description: 'Dagmar Härle Kunstvermittlung begleitet Sie persönlich beim Verkauf und Ankauf hochwertiger Kunstwerke – diskret, zuverlässig und mit einem starken internationalen Netzwerk.',
+          keywords: 'Kunstvermittlung, Kunst verkaufen, Kunst ankaufen, Kunstberatung, Dagmar Härle'
+        },
+        'ueber-uns': {
+          title: 'Über Dagmar Härle – Ihre Kunstvermittlerin mit internationalem Netzwerk',
+          description: 'Erfahren Sie mehr über Dagmar Härle, Ihre Expertin für Kunstvermittlung, die Käufer und Verkäufer hochwertiger Kunstwerke zusammenbringt.',
+          keywords: 'Dagmar Härle, Kunstvermittlerin, Kunstberatung'
+        },
+        'unsere-leistung': {
+          title: 'Leistungen – Individuelle Kunstberatung & Vermittlung von Dagmar Härle',
+          description: 'Entdecken Sie die Leistungen von Dagmar Härle – von der Kunstbewertung über Verkaufsstrategien bis zur Vermittlung maßgeschneiderter Kunstkonzepte.',
+          keywords: 'Kunstberatung Leistungen, Kunstbewertung, Kunst Ankauf'
+        },
+        netzwerk: {
+          title: 'Netzwerk – Verlässliche Partner der Dagmar Härle Kunstvermittlung',
+          description: 'Lernen Sie das exklusive Netzwerk von Dagmar Härle kennen – vertrauensvolle Partner für Museen, Galerien, Gutachter und Kunstsammler.',
+          keywords: 'Kunst Netzwerk, Kunstpartner, Galerien, Museen'
+        },
+        'kunst-als-kapitalanlage': {
+          title: 'Kunst als Kapitalanlage – Strategien von Dagmar Härle',
+          description: 'Wie Sie Kunstwerke als werthaltige Kapitalanlage nutzen: Beratung von Dagmar Härle für Sammler und Investoren.',
+          keywords: 'Kunst Kapitalanlage, Kunst Investment, Kunststrategie'
+        },
+        ausstellungen: {
+          title: 'Ausstellungen – Museale Projekte mit Dagmar Härle',
+          description: 'Aktuelle und vergangene Ausstellungen, die Dagmar Härle mitgestaltet hat – Einblicke in museale Projekte und Künstlerkontakte.',
+          keywords: 'Kunstausstellungen, Museen, Kunstprojekte'
+        },
+        'kontakt-und-impressum': {
+          title: 'Kontakt & Impressum – Dagmar Härle Kunstvermittlung',
+          description: 'Kontaktieren Sie Dagmar Härle Kunstvermittlung in Freiberg am Neckar – alle Kontaktdaten und Impressum auf einen Blick.',
+          keywords: 'Kontakt Kunstvermittlung, Dagmar Härle Kontakt, Impressum'
+        },
+        'aktuelle-kuenstler': {
+          title: 'Aktuelle Künstler – Portfolio der Dagmar Härle Kunstvermittlung',
+          description: 'Aktuelle Künstler im Portfolio von Dagmar Härle Kunstvermittlung – ausgewählte Werke etablierter und aufstrebender Positionen.',
+          keywords: 'Aktuelle Künstler, Kunstportfolio, Kunstwerke kaufen'
+        },
+        downloads: {
+          title: 'Downloads – Informationen der Dagmar Härle Kunstvermittlung',
+          description: 'Praktische Downloads der Dagmar Härle Kunstvermittlung – Formulare, Informationen und weiterführende Unterlagen.',
+          keywords: 'Downloads, Formulare, Kunstinformationen'
+        },
+        cookies: {
+          title: 'Cookies – Dagmar Härle Kunstvermittlung',
+          description: 'Informationen zu Cookies der Website der Dagmar Härle Kunstvermittlung.',
+          keywords: 'Cookie-Richtlinie, Website Cookies'
+        },
+        datenschutz: {
+          title: 'Datenschutz – Dagmar Härle Kunstvermittlung',
+          description: 'Datenschutzerklärung der Dagmar Härle Kunstvermittlung – Schutz Ihrer personenbezogenen Daten.',
+          keywords: 'Datenschutz, Datenschutzrichtlinie, personenbezogene Daten'
+        },
+        datenschutzformular: {
+          title: 'Datenschutzformular – Dagmar Härle Kunstvermittlung',
+          description: 'Online-Formular zur Ausübung Ihrer Datenschutzrechte bei der Dagmar Härle Kunstvermittlung.',
+          keywords: 'Datenschutzformular, Auskunftsantrag'
+        },
+        haftungsausschluss: {
+          title: 'Haftungsausschluss – Dagmar Härle Kunstvermittlung',
+          description: 'Haftungsausschluss der Dagmar Härle Kunstvermittlung – rechtliche Hinweise zur Nutzung der Website.',
+          keywords: 'Haftungsausschluss, rechtliche Hinweise'
+        },
+        impressum: {
+          title: 'Impressum – Dagmar Härle Kunstvermittlung',
+          description: 'Impressum der Dagmar Härle Kunstvermittlung – Angaben nach §5 TMG.',
+          keywords: 'Impressum, Anbieterkennzeichnung'
+        },
+        'vielen-dank': {
+          title: 'Vielen Dank – Dagmar Härle Kunstvermittlung',
+          description: 'Vielen Dank für Ihre Nachricht an Dagmar Härle Kunstvermittlung. Wir melden uns in Kürze.',
+          keywords: 'Vielen Dank, Kontaktbestätigung'
+        }
+      }
+    }
+  };
+
   function makeHref(rootPath, target) {
     if (!target) {
       return '#';
@@ -297,6 +468,83 @@
     return id;
   }
 
+  function resolveUrl(url, base) {
+    try {
+      return new URL(url, base || window.location.href).toString();
+    } catch (error) {
+      var anchor = document.createElement('a');
+      anchor.href = url;
+      return anchor.href;
+    }
+  }
+
+  function updateMeta(name, content) {
+    if (!content) return;
+    var meta = document.querySelector('meta[name="' + name + '"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }
+
+  function updatePropertyMeta(property, content) {
+    if (!content) return;
+    var meta = document.querySelector('meta[property="' + property + '"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('property', property);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', content);
+  }
+
+  function ensureLink(rel, hreflang, href) {
+    if (!href) return;
+    var selector = 'link[rel="' + rel + '"]' + (hreflang ? '[hreflang="' + hreflang + '"]' : '');
+    var link = document.querySelector(selector);
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = rel;
+      if (hreflang) {
+        link.setAttribute('hreflang', hreflang);
+      }
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', href);
+  }
+
+  function ensureStructuredData(lang, canonicalUrl) {
+    var existing = document.querySelector('script[data-structured="seo"]');
+    if (existing) return;
+
+    var data = {
+      '@context': 'https://schema.org',
+      '@type': 'ProfessionalService',
+      name: lang === 'de' ? 'Dagmar Härle Kunstvermittlung' : 'Dagmar Härle Art Advisory',
+      url: canonicalUrl,
+      image: resolveUrl('/shared/images/dagmar_haerle.jpg'),
+      telephone: '+49-172-7314160',
+      email: lang === 'de' ? 'kontakt@haerle-kunstvermittlung.com' : 'contact@haerle-kunstvermittlung.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Grünlandstr. 1',
+        postalCode: '71691',
+        addressLocality: 'Freiberg am Neckar',
+        addressCountry: 'DE'
+      },
+      areaServed: lang === 'de' ? ['Deutschland', 'International'] : ['Germany', 'International'],
+      inLanguage: lang
+    };
+
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-structured', 'seo');
+    script.textContent = JSON.stringify(data);
+    document.body.appendChild(script);
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const lang = body.dataset.lang;
@@ -319,5 +567,51 @@
 
     const quickLinkElements = Array.prototype.slice.call(document.querySelectorAll('[data-layout="quick-links"]'));
     buildQuickLinks(quickLinkElements, config, context);
+
+    const seoConfig = SEO_CONFIG[lang];
+    const pageSeo = seoConfig && seoConfig.pages && (seoConfig.pages[context.pageId] || seoConfig.pages.default);
+    const canonical = document.querySelector('link[rel="canonical"]');
+    var canonicalHref = canonical ? canonical.getAttribute('href') : '';
+    if (canonicalHref) {
+      const absoluteCanonical = resolveUrl(canonicalHref);
+      canonical.setAttribute('href', absoluteCanonical);
+      if (seoConfig && seoConfig.settings) {
+        updatePropertyMeta('og:url', absoluteCanonical);
+      }
+      ensureLink('alternate', lang, absoluteCanonical);
+      ensureLink('alternate', 'x-default', resolveUrl('/index.html'));
+      if (context.languageSwitch) {
+        const otherLang = lang === 'de' ? 'en' : 'de';
+        ensureLink('alternate', otherLang, resolveUrl(context.languageSwitch));
+      }
+      ensureStructuredData(lang, absoluteCanonical);
+    }
+
+    if (seoConfig && seoConfig.settings) {
+      updatePropertyMeta('og:site_name', seoConfig.settings.siteName);
+      updatePropertyMeta('og:locale', seoConfig.settings.locale);
+      if (seoConfig.settings.alternateLocale) {
+        updatePropertyMeta('og:locale:alternate', seoConfig.settings.alternateLocale);
+      }
+    }
+
+    if (pageSeo) {
+      if (pageSeo.title) {
+        document.title = pageSeo.title;
+        updatePropertyMeta('og:title', pageSeo.title);
+        updateMeta('twitter:title', pageSeo.title);
+      }
+      if (pageSeo.description) {
+        updateMeta('description', pageSeo.description);
+        updatePropertyMeta('og:description', pageSeo.description);
+        updateMeta('twitter:description', pageSeo.description);
+      }
+      if (pageSeo.keywords) {
+        updateMeta('keywords', pageSeo.keywords);
+      }
+    }
+
+    updatePropertyMeta('og:type', 'website');
+    updateMeta('twitter:card', 'summary');
   });
 })();
