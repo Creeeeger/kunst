@@ -87,29 +87,29 @@
       },
       pages: {
         home: {
-          title: 'Dagmar Härle Art Advisory – Acquire & sell fine art with confidence',
-          description: 'Dagmar Härle Art Advisory connects collectors, investors, and sellers of high-value art through bespoke guidance and a trusted international network.',
-          keywords: 'Art advisory, art brokerage, buy art, sell art, Dagmar Härle'
+          title: 'Dagmar Härle Art Advisory – Tailored fine art mediation & consulting',
+          description: 'Dagmar Härle Art Advisory offers bespoke mediation for high-value art, uniting collections with cultural partners through trusted expertise and an international network.',
+          keywords: 'Art advisory, art mediation, art consulting, Dagmar Härle'
         },
         'about-us': {
           title: 'About Dagmar Härle – Art advisor with a strong international network',
-          description: 'Learn more about art advisor Dagmar Härle and her decades of experience connecting art buyers and sellers around the world.',
-          keywords: 'Dagmar Härle, art advisor, art brokerage, art consulting'
+          description: 'Learn more about art advisor Dagmar Härle and her decades of experience mediating meaningful encounters with outstanding works of art worldwide.',
+          keywords: 'Dagmar Härle, art advisor, art mediation, art consulting'
         },
         'my-services': {
-          title: 'Services – Personal art brokerage & consulting by Dagmar Härle',
-          description: 'Discover the services offered by Dagmar Härle Art Advisory: valuations, sales strategies, acquisitions, and bespoke art concepts.',
-          keywords: 'Art consulting services, art valuation, art acquisition, bespoke art concepts'
+          title: 'Services – Personal art mediation & consulting by Dagmar Härle',
+          description: 'Discover the services offered by Dagmar Härle Art Advisory: valuations, curatorial concepts, and bespoke mediation for significant art collections.',
+          keywords: 'Art consulting services, art valuation, art mediation, bespoke art concepts'
         },
         network: {
           title: 'Network – Trusted partners of Dagmar Härle Art Advisory',
-          description: 'Meet the trusted network of museums, galleries, experts, and collectors that collaborate with Dagmar Härle Art Advisory.',
-          keywords: 'Art network, art galleries, museum partners, art collectors'
+          description: 'Meet the trusted network of museums, galleries, experts, and collectors that collaborate with Dagmar Härle Art Advisory on cultural projects.',
+          keywords: 'Art network, art galleries, museum partners, art mediation'
         },
         'art-as-investment': {
           title: 'Art as an investment – Strategic guidance by Dagmar Härle',
-          description: 'Guidance on how to position art as an investment asset with the expertise of Dagmar Härle Art Advisory.',
-          keywords: 'Art investment, art strategy, art portfolio, art advisor'
+          description: 'Strategic guidance on how to position art collections for long-term value with the expertise of Dagmar Härle Art Advisory.',
+          keywords: 'Art investment, art strategy, art portfolio, art consulting'
         },
         exhibitions: {
           title: 'Exhibitions – Museum collaborations curated with Dagmar Härle',
@@ -122,9 +122,9 @@
           keywords: 'Art advisory contact, Dagmar Härle contact, legal notice'
         },
         'current-artists': {
-          title: 'Current artists – Works available via Dagmar Härle Art Advisory',
-          description: 'Explore the outstanding works and current artists represented by Dagmar Härle Art Advisory.',
-          keywords: 'Current artists, art portfolio, artworks for sale'
+          title: 'Current artists – Artistic positions mediated by Dagmar Härle',
+          description: 'Explore outstanding artists presented and mediated by Dagmar Härle Art Advisory.',
+          keywords: 'Current artists, art portfolio, art mediation'
         },
         downloads: {
           title: 'Downloads – Resources from Dagmar Härle Art Advisory',
@@ -171,28 +171,28 @@
       },
       pages: {
         home: {
-          title: 'Dagmar Härle Kunstvermittlung – Kunst verkaufen & kaufen',
-          description: 'Dagmar Härle Kunstvermittlung begleitet Sie persönlich beim Verkauf und Ankauf hochwertiger Kunstwerke – diskret, zuverlässig und mit einem starken internationalen Netzwerk.',
-          keywords: 'Kunstvermittlung, Kunst verkaufen, Kunst ankaufen, Kunstberatung, Dagmar Härle'
+          title: 'Dagmar Härle Kunstvermittlung – Individuelle Kunstvermittlung & Beratung',
+          description: 'Dagmar Härle Kunstvermittlung begleitet Sie persönlich bei der Vermittlung hochwertiger Kunst – diskret, zuverlässig und mit einem starken internationalen Netzwerk.',
+          keywords: 'Kunstvermittlung, Kunstberatung, Kunstexpertin, Dagmar Härle'
         },
         'ueber-uns': {
           title: 'Über Dagmar Härle – Ihre Kunstvermittlerin mit internationalem Netzwerk',
-          description: 'Erfahren Sie mehr über Dagmar Härle, Ihre Expertin für Kunstvermittlung, die Käufer und Verkäufer hochwertiger Kunstwerke zusammenbringt.',
+          description: 'Erfahren Sie mehr über Dagmar Härle, Ihre Expertin für Kunstvermittlung, die inspirierende Begegnungen mit bedeutenden Kunstwerken ermöglicht.',
           keywords: 'Dagmar Härle, Kunstvermittlerin, Kunstberatung'
         },
         'unsere-leistung': {
           title: 'Leistungen – Individuelle Kunstberatung & Vermittlung von Dagmar Härle',
-          description: 'Entdecken Sie die Leistungen von Dagmar Härle – von der Kunstbewertung über Verkaufsstrategien bis zur Vermittlung maßgeschneiderter Kunstkonzepte.',
-          keywords: 'Kunstberatung Leistungen, Kunstbewertung, Kunst Ankauf'
+          description: 'Entdecken Sie die Leistungen von Dagmar Härle – von der Kunstbewertung über kuratorische Konzepte bis zur Vermittlung maßgeschneiderter Kunstprojekte.',
+          keywords: 'Kunstberatung Leistungen, Kunstbewertung, Kunstvermittlung'
         },
         netzwerk: {
           title: 'Netzwerk – Verlässliche Partner der Dagmar Härle Kunstvermittlung',
-          description: 'Lernen Sie das exklusive Netzwerk von Dagmar Härle kennen – vertrauensvolle Partner für Museen, Galerien, Gutachter und Kunstsammler.',
+          description: 'Lernen Sie das exklusive Netzwerk von Dagmar Härle kennen – vertrauensvolle Partner für Museen, Galerien, Gutachter und Kunstsammlerinnen.',
           keywords: 'Kunst Netzwerk, Kunstpartner, Galerien, Museen'
         },
         'kunst-als-kapitalanlage': {
           title: 'Kunst als Kapitalanlage – Strategien von Dagmar Härle',
-          description: 'Wie Sie Kunstwerke als werthaltige Kapitalanlage nutzen: Beratung von Dagmar Härle für Sammler und Investoren.',
+          description: 'Wie Sie Kunstwerke als werthaltige Kapitalanlage nutzen: Strategische Begleitung von Dagmar Härle für Sammlerinnen und Sammler.',
           keywords: 'Kunst Kapitalanlage, Kunst Investment, Kunststrategie'
         },
         ausstellungen: {
@@ -207,8 +207,8 @@
         },
         'aktuelle-kuenstler': {
           title: 'Aktuelle Künstler – Portfolio der Dagmar Härle Kunstvermittlung',
-          description: 'Aktuelle Künstler im Portfolio von Dagmar Härle Kunstvermittlung – ausgewählte Werke etablierter und aufstrebender Positionen.',
-          keywords: 'Aktuelle Künstler, Kunstportfolio, Kunstwerke kaufen'
+          description: 'Aktuelle Künstler im Portfolio von Dagmar Härle Kunstvermittlung – ausgewählte Werke etablierter und aufstrebender Positionen für inspirierende Vermittlungsprojekte.',
+          keywords: 'Aktuelle Künstler, Kunstportfolio, Kunstvermittlung'
         },
         downloads: {
           title: 'Downloads – Informationen der Dagmar Härle Kunstvermittlung',
