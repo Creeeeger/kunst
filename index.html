@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="/de/index.html">
+  <link rel="alternate" hreflang="de" href="/de/index.html">
+  <link rel="alternate" hreflang="en" href="/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="/index.html">
   <noscript>
     <meta http-equiv="refresh" content="0;url=/de/index.html">
   </noscript>
@@ -35,6 +38,16 @@
         return result;
       }
 
+      function queryLanguage() {
+        var match = window.location.search.match(/(?:\?|&)lang=([a-zA-Z-]+)/);
+        if (match && match[1]) {
+          var value = normalise(match[1]);
+          if (value.indexOf('de') === 0) return 'de';
+          if (value.indexOf('en') === 0) return 'en';
+        }
+        return '';
+      }
+
       function targetFor(languages) {
         for (var i = 0; i < languages.length; i += 1) {
           if (languages[i].indexOf('en') === 0) {
@@ -47,13 +60,32 @@
         return '/de/index.html';
       }
 
-      var languages = preferredLanguages();
-      var target = targetFor(languages);
-      var canonical = document.querySelector('link[rel="canonical"]');
-      var origin = window.location.origin || '';
-      if (canonical) {
-        canonical.setAttribute('href', origin ? origin + target : target);
+      function toAbsolute(url) {
+        try {
+          return new URL(url, window.location.href).toString();
+        } catch (error) {
+          var anchor = document.createElement('a');
+          anchor.href = url;
+          return anchor.href;
+        }
       }
+
+      var languages = preferredLanguages();
+      var override = queryLanguage();
+      var target = override === 'en' ? '/en/index.html' : override === 'de' ? '/de/index.html' : targetFor(languages);
+      var canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', toAbsolute(target));
+      }
+
+      var alternates = document.querySelectorAll('link[rel="alternate"][hreflang]');
+      for (var i = 0; i < alternates.length; i += 1) {
+        var href = alternates[i].getAttribute('href');
+        if (href) {
+          alternates[i].setAttribute('href', toAbsolute(href));
+        }
+      }
+
       if (window.location.pathname !== target) {
         window.location.replace(target);
       }
